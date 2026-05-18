@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReformGov – Open-Source Reformvorschläge für Deutschland</title>
+  <meta name="description" content="Eine offene Plattform, auf der Bürgerin und Bürger gemeinsam fundierte Reformvorschläge für Deutschland erarbeiten – transparent, faktenbasiert, parteilos." />
+  <meta property="og:title" content="ReformGov – Reformen für Deutschland" />
+  <meta property="og:description" content="Crowdsourced Reformvorschläge für Steuer, Rente, Gesundheit und mehr – offen und frei für alle." />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <a class="logo" href="#">
+    <div class="logo-icon"><span class="material-icons" style="font-size:1rem;color:#fff">account_balance</span></div>
+    <span class="logo-text"><span>Reform</span>Gov</span>
+  </a>
+  <nav>
+    <a href="#reformen">Reformen</a>
+    <a href="#mitmachen">Mitmachen</a>
+    <a href="#ueber">Projekt</a>
+    <a class="nav-cta" href="https://github.com/reformgov/reformen" target="_blank" rel="noopener">
+      <span class="material-icons" style="font-size:0.9rem">open_in_new</span> GitHub
+    </a>
+  </nav>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-label">
+        <span class="material-icons" style="font-size:0.8rem">verified</span>
+        Open Source &middot; Parteilos &middot; Bürgergetragen
+      </div>
+      <h1>
+        Konkrete Reformen für<br/>
+        <em>ein besseres Deutschland.</em>
+      </h1>
+      <p class="hero-sub">
+        ReformGov ist eine offene Plattform, auf der Expertinnen, Bürger
+        und Interessierte gemeinsam fundierte Reformvorschläge erarbeiten –
+        transparent, faktenbasiert und frei verfügbar für alle.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#reformen">
+          <span class="material-icons" style="font-size:1rem">explore</span>
+          Reformen entdecken
+        </a>
+        <a class="btn btn-secondary" href="https://github.com/reformgov/reformen" target="_blank" rel="noopener">
+          <span class="material-icons" style="font-size:1rem">code</span>
+          Auf GitHub mitmachen
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-visual-title">
+        <span class="material-icons" style="font-size:0.85rem">bar_chart</span>
+        Aktuelle Reformbereiche
+      </div>
+      <ul id="progress-list" class="progress-list"></ul>
+      <p id="progress-source" style="font-size:0.72rem;margin-top:0.75rem;display:flex;align-items:center;gap:0.3rem;opacity:0.7;"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ── MARQUEE ── -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span><span class="material-icons">payments</span>Steuerreform</span>
+    <span><span class="material-icons">health_and_safety</span>Krankenversicherung</span>
+    <span><span class="material-icons">elderly</span>Rentenversicherung</span>
+    <span><span class="material-icons">school</span>Bildung</span>
+    <span><span class="material-icons">apartment</span>Wohnungsmarkt</span>
+    <span><span class="material-icons">eco</span>Klima &amp; Energie</span>
+    <span><span class="material-icons">account_balance</span>Verwaltungsmodernisierung</span>
+    <span><span class="material-icons">people</span>Von Bürgern – für Bürger</span>
+    <span><span class="material-icons">payments</span>Steuerreform</span>
+    <span><span class="material-icons">health_and_safety</span>Krankenversicherung</span>
+    <span><span class="material-icons">elderly</span>Rentenversicherung</span>
+    <span><span class="material-icons">school</span>Bildung</span>
+    <span><span class="material-icons">apartment</span>Wohnungsmarkt</span>
+    <span><span class="material-icons">eco</span>Klima &amp; Energie</span>
+    <span><span class="material-icons">account_balance</span>Verwaltungsmodernisierung</span>
+    <span><span class="material-icons">people</span>Von Bürgern – für Bürger</span>
+  </div>
+</div>
+
+<!-- ── STATS ── -->
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-num" id="stat-total">7</span>
+      <span class="stat-label">Reformbereiche</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Offen &amp; transparent</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">CC</span>
+      <span class="stat-label">Freie Lizenz BY&nbsp;4.0</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── TRUST BAR ── -->
+<div class="trust-bar">
+  <p>Unsere Grundprinzipien</p>
+  <div class="trust-items">
+    <div class="trust-item">
+      <span class="material-icons">check_circle</span> Faktenbasiert &amp; quellenbelegt
+    </div>
+    <div class="trust-item">
+      <span class="material-icons">check_circle</span> Überparteilich &amp; unabhängig
+    </div>
+    <div class="trust-item">
+      <span class="material-icons">check_circle</span> Offen für alle Perspektiven
+    </div>
+    <div class="trust-item">
+      <span class="material-icons">check_circle</span> Peer-Review durch Community
+    </div>
+    <div class="trust-item">
+      <span class="material-icons">check_circle</span> Freie Lizenz – keine Rechtevorbehalte
+    </div>
+  </div>
+</div>
+
+<!-- ── REFORM CARDS ── -->
+<div id="reformen" class="cards-section">
+  <div class="section-intro">
+    <div>
+      <div class="section-label"><span class="material-icons" style="font-size:0.8rem">folder_open</span>Reformbereiche</div>
+      <h2>Wo Deutschland Reformen braucht.</h2>
+    </div>
+    <a class="section-more" href="https://github.com/reformgov/reformen" target="_blank" rel="noopener">
+      Alle Dokumente auf GitHub <span class="material-icons" style="font-size:0.9rem">arrow_forward</span>
+    </a>
+  </div>
+
+  <div id="cards-grid" class="cards-grid"></div>
+</div>
+
+<!-- ── HOW IT WORKS ── -->
+<div id="mitmachen" class="how-section">
+  <div class="section-intro">
+    <div>
+      <div class="section-label"><span class="material-icons" style="font-size:0.8rem">groups</span>Mitmachen</div>
+      <h2>So funktioniert kollektive Reformarbeit.</h2>
+    </div>
+  </div>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">Schritt 01</div>
+      <div class="step-icon"><span class="material-icons">forum</span></div>
+      <h4>Diskutieren</h4>
+      <p>Starte oder kommentiere eine Diskussion auf GitHub. Kein technisches Vorwissen nötig – nur eine Meinung und Sachkenntnis.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">Schritt 02</div>
+      <div class="step-icon"><span class="material-icons">search</span></div>
+      <h4>Recherchieren</h4>
+      <p>Lies bestehende Vorschläge, prüfe Quellen und identifiziere Verbesserungspotenzial und Forschungslücken.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">Schritt 03</div>
+      <div class="step-icon"><span class="material-icons">edit_note</span></div>
+      <h4>Beitragen</h4>
+      <p>Erstelle einen Reformvorschlag mit unserer Vorlage – direkt im Browser auf GitHub, ohne technische Kenntnisse.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">Schritt 04</div>
+      <div class="step-icon"><span class="material-icons">rate_review</span></div>
+      <h4>Peer Review</h4>
+      <p>Die Community diskutiert, ergänzt und verbessert. Durch kollektive Prüfung entstehen robuste, ausgewogene Konzepte.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA ── -->
+<div id="ueber" class="cta-section">
+  <h2>Deutschland braucht mutige,<br/>faktenbasierte Reformen.</h2>
+  <p>
+    ReformGov ist kein Partei-, sondern ein Gesellschaftsprojekt.
+    Ob Bürger, Expertin, Wissenschaftler oder Unternehmerin –
+    jede Stimme und jede Expertise ist willkommen.
+  </p>
+  <div class="cta-actions">
+    <a class="btn btn-white" href="https://github.com/reformgov/reformen/discussions" target="_blank" rel="noopener">
+      <span class="material-icons" style="font-size:1rem">forum</span>
+      Diskussion starten
+    </a>
+    <a class="btn btn-outline-white" href="https://github.com/reformgov/reformen" target="_blank" rel="noopener">
+      <span class="material-icons" style="font-size:1rem">code</span>
+      Repository ansehen
+    </a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <a class="footer-logo" href="#">
+      <div class="logo-icon"><span class="material-icons" style="font-size:0.9rem;color:rgba(255,255,255,0.7)">account_balance</span></div>
+      ReformGov
+    </a>
+    <div class="footer-made">
+      <span class="material-icons">favorite</span>
+      Gemacht mit Liebe von <strong>&nbsp;Björn, Carolin, Lars und Freunde</strong>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/reformgov/reformen/blob/main/LICENSE" target="_blank" rel="noopener">Lizenz CC BY 4.0</a>
+      <a href="https://github.com/reformgov/reformen/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Mitmachen</a>
+      <a href="https://github.com/reformgov/reformen/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener">Verhaltenskodex</a>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="progress.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
